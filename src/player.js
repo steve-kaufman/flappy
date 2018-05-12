@@ -2,12 +2,13 @@ var player = {
     width : 32,
     height : 32,
     
-    flap_strength : 10,
+    flap_strength : 15,
     
     init : function(){
         this.x = window.innerWidth / 2 - this.width / 2;
-        this.y = window.innerHeight / 4;
-        this.entity = new Entity(this.x, this.y, this.width, this.height);
+        this.y = 0;
+        this.entity = new Entity(this.x, this.y, this.width, this.height,
+								 {label : 'player'});
         this.physical = this.entity.physical;
     },
     update : function(){

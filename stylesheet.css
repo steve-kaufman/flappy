@@ -1,0 +1,11 @@
+body{
+	background : white;/*#ffffcc;*/
+}
+#score{
+	font-size : 60px;
+}
+#score_cont{
+	width : 100%;
+	position : absolute;
+	text-align : center;
+}
