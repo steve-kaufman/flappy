@@ -1,11 +1,21 @@
+Canvas.create();
 
+
+function init(){
+    engine.world.gravity.y = 2;
+    
+    player.init();
+    
+    Update.start();
+    Render.start();
+}
 
 function renderInit(){
-    //ground.render();
+    
 }
 
 function render(){
-    
+    Canvas.ctx.clear();
     
     for(var entity in Entities){
         Entities[entity].render();
@@ -13,10 +23,7 @@ function render(){
 }
 
 function update(){
-    if(IO.keyTapped(38)) Matter.Body.setVelocity(
-        player.physical,
-        Matter.Vector.create(player.physical.velocity.x, -player.jump)
-    );
+    player.update();
     
     for(var entity in Entities){
         Entities[entity].update();
@@ -27,10 +34,12 @@ function gameOver(){
     Render.stop();
     Update.stop();
     
-    Matter.Composite.clear(engine.world);
-    Entities = [];
+    setTimeout(function(){
+        Matter.Composite.clear(engine.world);
+        Entities = [];
     
-    init();
+        init();
+    }, 1000);
 }
 
 Matter.Events.on(engine, 'collisionActive', function(e){
@@ -45,4 +54,4 @@ Matter.Events.on(engine, 'collisionActive', function(e){
     }
 });
 
-$(document).ready(init());
+if(window.init) $(document).ready(init());
