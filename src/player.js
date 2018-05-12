@@ -12,7 +12,7 @@ var player = {
         this.physical = this.entity.physical;
     },
     update : function(){
-        if(IO.keyTapped(38)){
+        if(IO.keyTapped([38, 32, 87])){
             this.flap();
         }
         if(this.physical.position.y > window.innerHeight){
