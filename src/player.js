@@ -1,6 +1,6 @@
 var player = {
-    width : 32,
-    height : 32,
+    width : window.innerHeight / 32,
+    height : window.innerHeight / 32,
     
     flap_strength : 15,
     
