@@ -5,7 +5,7 @@ var player = {
     flap_strength : 15,
     
     init : function(){
-        this.x = window.innerWidth / 2 - this.width / 2;
+        this.x = window.innerWidth / 2;
         this.y = 0;
         this.entity = new Entity(this.x, this.y, this.width, this.height,
 								 {label : 'player'});

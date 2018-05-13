@@ -1,5 +1,7 @@
 Canvas.create();
 
+var birdImg = new Sprite('images/bird.png');
+
 var loading = true;
 
 var score;
@@ -12,6 +14,8 @@ function init(){
 	score = 0;
 	
     player.init();
+    
+    player.entity.sprite = birdImg;
 	
 	ceiling = new Entity(0, -125, window.innerWidth, 50, {isStatic : true});
 	
@@ -34,6 +38,7 @@ function render(){
 			Entities[entity].render();
 		}
     }
+    player.entity.render();
 }
 
 function update(){
@@ -44,7 +49,7 @@ function update(){
     for(var entity in Entities){
 		if(Entities[entity].update){
 			Entities[entity].update();
-		}    
+		}
 	}
 }
 

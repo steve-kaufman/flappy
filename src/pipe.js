@@ -4,8 +4,8 @@ function Pipe(){
 	
 	this.spacing = player.height * 7;
 	
-	this.splitY = (Math.random() * window.innerHeight * 0.8) +
-					(window.innerHeight * 0.1);
+	this.splitY = (Math.random() * window.innerHeight * 0.7) +
+					(window.innerHeight * 0.15);
 	this.width = player.width * 7;
 	this.height = this.splitY;
 	this.x = window.innerWidth + this.width / 2;
@@ -24,6 +24,9 @@ function Pipe(){
 	this.bottom = new Entity(bot.x, bot.y, 
 							 bot.width, bot.height,
 							 {isStatic : true, isSensor : true, class : 'game_over'});
+	
+	this.top.color = 'green';
+	this.bottom.color = 'green';
 	
 	this.physical = this.top.physical;
 	
