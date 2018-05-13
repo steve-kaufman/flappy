@@ -2,11 +2,11 @@ var pipespeed = 8;
 function Pipe(){
 	this.reproduced = false;
 	
-	this.spacing = player.height * 8;
+	this.spacing = player.height * 7;
 	
 	this.splitY = (Math.random() * window.innerHeight * 0.8) +
 					(window.innerHeight * 0.1);
-	this.width = window.innerWidth / 8;
+	this.width = player.width * 7;
 	this.height = this.splitY;
 	this.x = window.innerWidth + this.width / 2;
 	this.y = -100 + this.height / 2;
