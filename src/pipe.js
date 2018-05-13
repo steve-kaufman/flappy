@@ -2,7 +2,7 @@ var pipespeed = 8;
 function Pipe(){
 	this.reproduced = false;
 	
-	this.spacing = window.innerHeight / 5 + player.height;
+	this.spacing = player.height * 8;
 	
 	this.splitY = (Math.random() * window.innerHeight * 0.8) +
 					(window.innerHeight * 0.1);
