@@ -1,5 +1,10 @@
 Canvas.create();
 
+var flappy_song = $('#flappy')[0];
+flappy_song.loop = true;
+flappy_song.autoplay = true;
+flappy_song.load();
+
 var birdImg = new Sprite('images/bird.png');
 
 var loading = true;
@@ -7,6 +12,7 @@ var loading = true;
 var score;
 
 function init(){
+	
 	pipespeed = 8;
 	
     engine.world.gravity.y = 2;
@@ -45,7 +51,7 @@ function update(){
     player.update();
     	
 	$('#score')[0].innerHTML = score;
-	
+		
     for(var entity in Entities){
 		if(Entities[entity].update){
 			Entities[entity].update();
