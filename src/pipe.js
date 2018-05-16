@@ -49,6 +49,7 @@ function Pipe(){
 			new Pipe();
 			this.reproduced = true;
 			score += 1;
+			if(score % 5 === 0) accomp_sound.play();
 			pipespeed += 0.2;
 			document.body.style.background = colors[Math.floor(Math.random() * 6 + 1)];
 			backctx.ctx.clear();

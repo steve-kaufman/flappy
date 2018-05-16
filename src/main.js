@@ -7,6 +7,9 @@ flappy_song.loop = true;
 flappy_song.autoplay = true;
 flappy_song.load();
 
+var accomp_sound = document.createElement('AUDIO');
+accomp_sound.src = 'sounds/accomp.wav';
+
 var birdImg = new Sprite('images/bird.png');
 
 var loading = true;
