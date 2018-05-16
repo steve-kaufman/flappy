@@ -2,10 +2,10 @@ var backctx = Canvas.create();
 
 Canvas.create();
 
-var flappy_song = $('#flappy')[0];
+var flappy_song = document.createElement('AUDIO');
+flappy_song.src = "music/flappy.wav";
 flappy_song.loop = true;
 flappy_song.autoplay = true;
-flappy_song.load();
 
 var accomp_sound = document.createElement('AUDIO');
 accomp_sound.src = 'sounds/accomp.wav';
