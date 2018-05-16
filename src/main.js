@@ -1,3 +1,5 @@
+var backctx = Canvas.create();
+
 Canvas.create();
 
 var flappy_song = $('#flappy')[0];
@@ -11,8 +13,29 @@ var loading = true;
 
 var score;
 
+var backgrounds = [
+    new Sprite('images/turtle.png'),
+    new Sprite('images/bird.png'),
+    new Sprite('images/slime.png')
+    ];
+
+var colors = [
+    'red',
+    'orange',
+    'yellow',
+    'green',
+    'blue',
+    'purple'
+    ];
+    
+Update.framerate = 60;
+Render.framerate = 60;
+
 function init(){
-	
+    backctx.ctx.clear();
+    
+    document.body.style.background = 'blue';
+    
 	pipespeed = 8;
 	
     engine.world.gravity.y = 2;
