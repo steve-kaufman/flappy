@@ -1,10 +1,10 @@
 body{
 	background : #7799ff;/*#ffffcc;*/
-    -webkit-transition: all 3s ease-in-out;
-    -moz-transition: all 3s ease-in-out;
-    -o-transition: all 3s ease-in-out;
-    -ms-transition: all 3s ease-in-out;
-    transition: all 3s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 #score{
 	font-size : 60px;
@@ -15,7 +15,7 @@ body{
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-	color: black;
+	color: white;
 }
 #score_cont{
 	width : 100vw;

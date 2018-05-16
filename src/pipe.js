@@ -25,8 +25,8 @@ function Pipe(){
 							 bot.width, bot.height,
 							 {isStatic : true, isSensor : true, class : 'game_over'});
 	
-	this.top.color = 'green';
-	this.bottom.color = 'green';
+	this.top.color = 'red';
+	this.bottom.color = 'red';
 	
 	this.physical = this.top.physical;
 	

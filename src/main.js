@@ -25,7 +25,12 @@ var colors = [
     'yellow',
     'green',
     'blue',
-    'purple'
+    'purple',
+    'black',
+    'white',
+    'grey',
+    'brown',
+    'pink',
     ];
     
 Update.framerate = 60;
