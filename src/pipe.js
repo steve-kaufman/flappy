@@ -51,6 +51,7 @@ function Pipe(){
 			score += 1;
 			pipespeed += 0.2;
 			document.body.style.background = colors[Math.floor(Math.random() * 6 + 1)];
+			backctx.ctx.clear();
 			backgrounds[Math.floor(Math.random() * backgrounds.length)].drawPattern(
 			    0, 0, window.innerWidth, window.innerHeight, backctx
 			);
